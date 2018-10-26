@@ -1,0 +1,432 @@
+/*
+Theme Name: My Theme
+Theme URI: https://localhost/wordpresslearn/mytheme
+Author: sweta
+Author URI: https://wordpress.org/
+Description: This is a simple theme for creating my own project
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: mytheme
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('assets/fonts/proximanova-black-webfont.woff2') format('woff2'),
+	url('assets/fonts/proximanova-black-webfont.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('assets/fonts/proximanova-bold-webfont.woff2') format('woff2'),
+	url('assets/fonts/proximanova-bold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('assets/fonts/proximanova-light-webfont.woff2') format('woff2'),
+	url('assets/fonts/proximanova-light-webfont.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('assets/fonts/proximanova-regular-webfont.woff2') format('woff2'),
+	url('assets/fonts/proximanova-regular-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('assets/fonts/proximanova-semibold-webfont.woff2') format('woff2'),
+	url('assets/fonts/proximanova-semibold-webfont.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+
+}
+/*======================================================================================================================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;0
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*======================================================================================================================================*/
+*{
+	box-sizing: border-box;
+}
+html{
+	height: 100%;
+}
+body{
+	font-size:15px;
+	font-family: 'ProximaNova',san-serif;
+	font-weight: 400;
+	min-height: 100%;
+}
+table{
+	width:100%;
+}
+
+table thead,table tfoot{
+	background:#f4f4f4;
+	padding:20px;
+}
+table th{
+	padding:20px;
+	text-align: center;
+}
+table td{
+	padding:10px;
+	text-align: center;
+}
+
+a{
+	text-decoration: none;
+	color:#000;
+}
+a:hover{
+	text-decoration: none;
+	color:#ccc;
+}
+
+section{
+	padding:100px 0 0;
+}
+
+h2{
+	font-size:25px;
+	font-weight: 700;
+}
+
+@media (min-width: 640px) {
+	
+}
+.wrapper{
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+	padding-bottom: 100px;
+}
+.container{
+	max-width: 960px;
+	margin:0 auto;
+	padding:0 15px;
+}
+
+.header{
+	position: fixed;
+	width: 100%;
+	padding:6px;
+	background: white;
+}
+.logo{
+	float: left;
+	max-width: 100px;
+}
+.logo img{
+	max-width: 70px;
+}
+.navigationbar{
+	float:right;
+	padding-top: 20px;
+}
+
+nav ul li{
+	display: inline-block;
+	padding:15px;
+}
+
+nav ul li a{
+	color:black;
+}
+
+nav ul li a:hover,.section-content a:hover{
+	color:#ccc;
+}
+
+nav ul li a:link, nav ul li a:visited, {
+	padding:20px;
+}
+
+nav ul li.current-menu-item a:link, nav ul li.current-menu-item a:visited ,
+ .list ul li.current-cat a:link,
+.list ul li.current-cat a:visited{
+	background-color: #0062a2;
+	color:#fff;
+	padding:20px;
+}
+.list ul li.current-cat a:link,
+.list ul li.current-cat a:visited{
+	padding: 10px;
+}
+.banner{
+	padding:300px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.banner-content{
+	border: solid #fff;
+	border-width: 3px 0;
+	padding:10px;
+}
+
+.banner h1,.banner p{
+	text-align: center;
+	color:#fff;
+	font-size:80px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.banner p{
+	font-size:40px;
+}
+.blog{
+	padding-top:50px;
+}
+.side-bar{
+	padding:20px;
+	background-color: #e6f2ff;
+	width:24%;
+	display: inline-block;
+	vertical-align: top;
+}
+.post-section{
+	display: inline-block;
+	width:75%;
+}
+.all-posts{
+	padding-top:40px;
+}
+.all-posts .post-section{
+	display: block;
+	width:100%;
+	background-color:#e6f2ff;
+	margin-bottom: 20px;
+}
+.post-section h2{
+	margin-bottom: 15px;
+}
+.post-section p{
+	text-align: justify;
+	line-height: 1.5;
+	margin-bottom: 15px;
+}
+.post-content {
+	margin-bottom: 5px;
+	background: #e6f2ff;
+	display: inline-block;
+	width: 49%;
+	padding: 20px;
+	vertical-align: top;
+}
+.image-section{
+	display: inline-block;
+	width:30%;
+}
+.odd{
+	margin:20px;
+}
+.even{
+	margin: 20px 0 20px 40px;
+}
+.all-posts .post-content{
+	width:65%;
+}
+.single .post-content{
+	display: block;
+	width: 100%;
+	padding : 50px;
+}
+
+.list{
+	margin-bottom: 20px;
+}
+
+.footer{
+	position:absolute;
+	bottom: 18px;
+	right: 0;
+	left: 0;
+	text-align: center;
+	font-size:12px;
+	border-top:1px solid #e6f2ff;
+	padding:10px;
+}
+
+.footer span{
+	text-align: center;
+}
+
+.button{
+	color:white;
+	border:none;
+	border-radius: 5px;
+}
+.btn-blue{
+	padding:10px 20px;
+	background:#0062a2;
+}
+.btn-sky{
+	padding:10px 20px;
+	background:#5bc0de;
+}
+.btn-green{
+	padding:10px 20px;
+	background:#2E8B57;
+}
+
+.btn-black{
+	padding:10px 20px;
+	background:#000;
+	display: inline-block;
+}
+.detail-description{
+	display: inline-block;
+	width: 50%;
+}
+.post-image{
+	display: inline-block;
+	width: 25%;
+	vertical-align: top;
+}
+.post-image img{
+	margin-left: 20px;
+}
+
+.list h2,.list ul li,.recent-comments h2,.recent-comments ul li{
+	margin : 20px 0;
+}
+.recent-comments ul li a:hover, .list ul li a:hover{
+	text-decoration: underline;
+	font-weight: 600;
+	color:black;
+}
+
+.recent-comments a{
+	word-break: break-word;
+}
+.contact-form{
+	padding:100px 0 0 0;
+}
+.contact-field h2 {
+	text-align: center;
+}
+.contact-field{
+	padding:50px;
+	background-color: #e6f2ff;
+}
+.form-wrapper{
+	display: block;
+	letter-spacing: -4px;
+	padding: 15px;
+}
+.form-wrapper .two-column:first-child{
+	margin-right:5px;
+}
+.form-group{
+	padding:15px;
+}
+textarea{
+	resize: none;
+}
+.input-field{
+	padding: 10px 0;
+	width:100%;
+}
+.two-column{
+	background-color: #e6f2ff;
+	margin: 0 20px 20px 0;
+}
+.two-column .image-section{
+	margin-top: 50px;
+	margin-left: 40px;
+	width: 40%;
+}
+.color-red{
+	color:#f00;
+	font-weight: 600;
+}
+
+div.wpforms-container-full 
+.wpforms-form input[type=submit], 
+div.wpforms-container-full .wpforms-form button[type=submit], 
+div.wpforms-container-full .wpforms-form .wpforms-page-button{
+	background:#0062a2;
+	color:#fff;
+}
+.images-wrapper{
+	background-color:#e6f2ff; 
+	padding: 20px;
+}
+
+.images-wrapper h2{
+	text-align: center;
+	margin-bottom:20px;
+}
+.images-wrapper img{
+	width:250px;
+	height: 250px;
+	padding: 20px;
+	vertical-align: top;
+}
+.wp-caption-text{
+	text-align: center;
+	font-weight: 600;
+	font-size: 20px;
+}
