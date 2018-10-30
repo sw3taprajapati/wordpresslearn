@@ -29,7 +29,8 @@
 			<header class="header">
 				<div class="container">
 					<div class="logo">
-						<a href="index.php"><img src="<?php echo get_template_directory_uri().'/assets/images/logo.png'; ?>" alt="Logo"></a>
+						<a href="<?php echo home_url(); ?>">
+							<img src="<?php echo  esc_url( get_template_directory_uri().'/assets/images/'.get_option('theme_logo')); ?>" alt="Logo"/></a>
 					</div>
 					<div class="navigationbar">
 						<nav>

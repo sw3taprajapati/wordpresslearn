@@ -5,6 +5,7 @@ get_header();
 	<div class="container">
 		<div class="post-section">
 			<?php 
+			if$query = new WP_Query( array( 'post_type'=>'post', 'posts_per_page' => 10 ) )
 			if(have_posts()){
 				while(have_posts()){
 					the_post();
@@ -20,14 +21,7 @@ get_header();
 			}
 			?>
 		</div>
-		<div class="side-bar">
-			<div class = "list">
-				<ul>
-					<?php dynamic_sidebar( 'sidebar-1' ); ?>
-				</ul>
-			</div>
-			<?php include('templates-parts/recent-comments.php'); ?>
-		</div>
+		<?php include('templates-parts/side-bar.php'); ?>
 	</div>
 </section>
 <?php

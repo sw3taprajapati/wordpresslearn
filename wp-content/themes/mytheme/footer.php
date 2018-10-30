@@ -27,9 +27,14 @@
 					<?php //wp_nav_menu(array('theme_location'=>'footer')); ?>
 				</nav>
 			</div>
- -->		</div>
+		-->		</div>
 	</footer>
 </div>
 <?php wp_footer(); ?>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>
+	
+</script>
 </body>
 </html>

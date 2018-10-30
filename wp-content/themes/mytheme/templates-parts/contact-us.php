@@ -6,19 +6,11 @@ get_header();
 <section class="contact-form">
 	<div class="container">
 		<div class="contact-field">
-			<?php 
-			if(have_posts()){
-				while(have_posts()){
-					the_post();
-					?>
-					<h2><?php the_title();?></h2>
-					<?php
-					the_content();
-				}
-			}
-			?><!-- 
-			<h2><?php //the_title();?></h2>
-			<form action="" method="post">
+			<h2><?php the_title();?></h2>
+			<?php echo do_shortcode('[contact-form-7 id="127" title="Contact Form"]'); ?>
+
+			
+			<!-- <form action="" method="post">
 				<div class="form-wrapper">
 					<div class="two-column">
 						<input type="text" name="fname" id="fname" class="input-field">
@@ -43,6 +35,7 @@ get_header();
 					<input type="submit" value="SEND" class=" button btn-blue">
 				</div>
 			</form> -->
+			
 		</div>
 	</div>
 </section>

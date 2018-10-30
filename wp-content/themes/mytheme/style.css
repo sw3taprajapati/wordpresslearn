@@ -1,3 +1,4 @@
+
 /*
 Theme Name: My Theme
 Theme URI: https://localhost/wordpresslearn/mytheme
@@ -168,6 +169,7 @@ h2{
 	width: 100%;
 	padding:6px;
 	background: white;
+	z-index: 999;
 }
 .logo{
 	float: left;
@@ -198,13 +200,13 @@ nav ul li a:link, nav ul li a:visited, {
 	padding:20px;
 }
 
-
 nav ul li.current-menu-item a:link, nav ul li.current-menu-item a:visited ,
- .list ul li.current-cat a:link,
+.list ul li.current-cat a:link,
 .list ul li.current-cat a:visited{
 	background-color: #0062a2;
 	color:#fff;
 	padding:20px;
+	text-decoration: none;
 }
 .list ul li.current-cat a:link,
 .list ul li.current-cat a:visited{
@@ -237,9 +239,9 @@ nav ul li.current-menu-item a:link, nav ul li.current-menu-item a:visited ,
 .banner p{
 	font-size:40px;
 }
-.blog{
+/*.blog{
 	padding-top:50px;
-}
+}*/
 .side-bar{
 	padding:20px;
 	background-color: #e6f2ff;
@@ -280,6 +282,10 @@ nav ul li.current-menu-item a:link, nav ul li.current-menu-item a:visited ,
 	display: inline-block;
 	width:30%;
 }
+
+.image-section img {
+	padding: 30px;
+}
 .odd{
 	margin:20px;
 }
@@ -294,14 +300,17 @@ nav ul li.current-menu-item a:link, nav ul li.current-menu-item a:visited ,
 	width: 100%;
 	padding : 50px;
 }
-
+.archive .two-column,.search .two-column{
+	display: block;
+	width:100%;
+	margin-bottom: 3px;
+}
 .list{
 	margin-bottom: 20px;
 }
-
 .footer{
 	position:absolute;
-	bottom: 18px;
+	bottom: 35px;
 	right: 0;
 	left: 0;
 	text-align: center;
@@ -317,7 +326,7 @@ nav ul li.current-menu-item a:link, nav ul li.current-menu-item a:visited ,
 .button{
 	color:white;
 	border:none;
-	border-radius: 5px;
+	border-radius: 10px;
 }
 .btn-blue{
 	padding:10px 20px;
@@ -375,10 +384,6 @@ nav ul li.current-menu-item a:link, nav ul li.current-menu-item a:visited ,
 .form-wrapper{
 	display: block;
 	letter-spacing: -4px;
-	padding: 15px;
-}
-.form-wrapper .two-column:first-child{
-	margin-right:5px;
 }
 .form-group{
 	padding:15px;
@@ -388,11 +393,17 @@ textarea{
 }
 .input-field{
 	padding: 10px 0;
+	margin-bottom: 5px;
 	width:100%;
+}
+.form-wrapper .two-column:first-child{
+	margin-right: 15px;
 }
 .two-column{
 	background-color: #e6f2ff;
-	margin: 0 20px 20px 0;
+	letter-spacing: 0;
+	display: inline-block;
+	width: 49%;
 }
 .two-column .image-section{
 	margin-top: 50px;
@@ -403,6 +414,10 @@ textarea{
 	color:#f00;
 	font-weight: 600;
 }
+.color-blue{
+	font-weight: 600;
+	color:#0062a2;
+}
 
 div.wpforms-container-full 
 .wpforms-form input[type=submit], 
@@ -411,23 +426,24 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button{
 	background:#0062a2;
 	color:#fff;
 }
+
 .images-wrapper{
-	background-color:#e6f2ff; 
+	background-color:#e6f2ff;
+	letter-spacing: -4px; 
 	padding: 20px;
 }
-
+.gallery .image-section{
+	width:33.33%;
+	letter-spacing: 0;
+	vertical-align: top;
+	margin-bottom: 30px;
+}
+.gallery .image-section p{
+	text-align: center;
+	font-size: 18px;
+}
 .images-wrapper h2{
 	text-align: center;
 	margin-bottom:20px;
-}
-.images-wrapper img{
-	width:250px;
-	height: 250px;
-	padding: 20px;
-	vertical-align: top;
-}
-.wp-caption-text{
-	text-align: center;
-	font-weight: 600;
-	font-size: 20px;
+	letter-spacing: 0;
 }

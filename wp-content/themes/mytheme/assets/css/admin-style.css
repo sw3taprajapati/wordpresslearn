@@ -1,0 +1,48 @@
+.wrap h2{
+	margin: 20px;
+	font-weight: 500;
+	font-size: 30px;
+}
+.color-red{
+	color:#f00;
+	font-weight: 600;
+}
+
+.color-blue{
+	font-weight: 600;
+	color:#0062a2;
+}
+.btn{
+	color:white;
+	border:none;
+}
+.btn-blue{
+	padding:10px 20px;
+	background:#0062a2;
+}
+.btn-sky{
+	padding:10px 20px;
+	background:#5bc0de;
+}
+.btn-green{
+	padding:10px 20px;
+	background:#2E8B57;
+}
+
+.btn-black{
+	padding:10px 20px;
+	background:#000;
+	display: inline-block;
+}
+.color-green{
+	color:#3cba54;
+	font-weight: 600;
+}
+
+.form-group{
+	line-height: 3;
+}
+.btn-grey{
+	background-color: #a6a6a6;
+	padding:10px 20px;
+}

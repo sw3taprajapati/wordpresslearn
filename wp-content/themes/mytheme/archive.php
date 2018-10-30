@@ -26,15 +26,7 @@ get_header();
 			}
 			?>
 		</div>
-		<div class="side-bar">
-			<div class = "list">
-				<ul>
-					<?php dynamic_sidebar( 'sidebar-1' ); ?>
-				</ul>
-			</div>
-			<?php include('templates-parts/recent-comments.php'); ?>
-		</div>
-		
+		<?php include('templates-parts/side-bar.php'); ?>
 	</div>
 </section>
 <?php
