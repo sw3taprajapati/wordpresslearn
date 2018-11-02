@@ -34,7 +34,32 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script>
-	
+	jQuery(document).ready(function($){
+
+		$(window).scroll(function(){
+			if ($(window).scrollTop() >= 100) {
+				$('.header').addClass('gradient-background');
+
+			}
+			else {
+				$('.header').removeClass('gradient-background');
+			}
+		});
+
+		$('.hamburger').on('click',function(){
+			$('.navigationbar').show();
+			$('.hamburger').hide();
+			$('.close').show();
+		});
+
+		$('.close').on('click',function(){
+			$('.navigationbar').hide();
+			$('.hamburger').show();
+			$('.close').hide();
+		});
+
+		
+	});
 </script>
 </body>
 </html>

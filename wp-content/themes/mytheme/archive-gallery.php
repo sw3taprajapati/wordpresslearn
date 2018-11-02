@@ -1,6 +1,4 @@
 <?php 
-/* Template Name: Gallery*/ 
-
 get_header();
 ?>
 <section class="gallery">
@@ -25,6 +23,12 @@ get_header();
 					</div>
 					<?php
 				}
+				?>
+				<div class="post-page">
+					<?php echo paginate_links(); ?>
+				</div>
+				<?php
+				
 			}
 			?>
 		</div>

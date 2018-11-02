@@ -31,13 +31,19 @@
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
 							<img src="<?php echo  esc_url( get_template_directory_uri().'/assets/images/'.get_option('theme_logo')); ?>" alt="Logo"/></a>
+						</div>
+						<div class="hamburger">
+							<i class="fa fa-bars"></i>
+						</div>
+						<div class="close">
+							<i class="fa fa-close"></i>
+						</div>
+						<div class="navigationbar">
+							<nav>
+								<?php wp_nav_menu(array('theme_location'=>'primary')); ?>
+							</nav>
+						</div>
 					</div>
-					<div class="navigationbar">
-						<nav>
-							<?php wp_nav_menu(array('theme_location'=>'primary')); ?>
-						</nav>
-					</div>
-				</div>
-			</header>
-			<main class="main">
-				
+				</header>
+				<main class="main">
+

@@ -5,6 +5,7 @@
  */
 function including_stylesheet(){
 	wp_enqueue_style('style',get_stylesheet_uri());
+	wp_enqueue_script( 'comment-reply' );
 }
 
 add_action ('wp_enqueue_scripts','including_stylesheet');
@@ -159,7 +160,7 @@ function mytheme_widgets_init () {
 		'name'          => __( 'Footer', 'mytheme' ),
 		'id'            => 'footer-1',
 		'description'   => __( 'footer text widget.', 'mytheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s footer-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -232,5 +233,20 @@ function theme_option_setting_page () {?>
 	</div>
 	<?php
 }
+
+/**
+ * [set_post_per_page to change default setting]
+ * @param [type] $query [description]
+ */
+function custom_pre_get_posts( $query ) {
+	// print_r( $query );
+	if ( ! is_admin() && is_post_type_archive( 'gallery' ) ) {
+		$query->set( 'posts_per_page',10 );
+	}
+	if (! is_admin() && $query->is_search ) {
+		$query->set('post_type', 'post');
+	}
+}
+add_action( 'pre_get_posts', 'custom_pre_get_posts' );
 ?>
 

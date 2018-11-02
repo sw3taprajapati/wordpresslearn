@@ -5,7 +5,14 @@ get_header();
 ?>
 <section class = "all-posts">
 	<div class = "container">
-		<?php $query = new WP_Query( array( 'post_type'=>'post', 'posts_per_page' => 10 ) );//to extract all the post of all categories
+		<?php 
+		$current_page=get_query_var('page');
+		$query = new WP_Query( array
+			( 'post_type'		=> 'post', 
+			  'posts_per_page' 	=> 	3 ,
+			  'paged'			=>	$current_page
+			));//to extract all the post of all categories
+
 		if($query -> have_posts () ){
 			$page_count=0;
 			while($query -> have_posts() ){
@@ -40,6 +47,10 @@ get_header();
 					<?php
 				}
 			}
+			echo paginate_links(array(
+				'current' => max( 1, get_query_var('page') ),
+				'total'	=>	$query->max_num_pages
+			));
 		}
 		?>
 
